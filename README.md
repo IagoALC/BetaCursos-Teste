@@ -1,5 +1,7 @@
 # Beta Cursos - Teste
 
+<h4>Feito com VUE e LARAVEL</h4>
+
 1. Faça o clone do repositório na sua pasta escolhida <br/>
     ``git clone https://github.com/IagoALC/BetaCursos-Teste.git`` <br/>
 2. Entre na pasta <br/>
