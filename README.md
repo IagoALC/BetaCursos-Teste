@@ -17,4 +17,4 @@
     ``npm install`` <br/>
 8. Inicie o front <br/>
     ``quasar dev`` <br/>
-9. Pronto, agora é só testar!!!!! :)
+9. Pronto, agora é só testar!!!! :)
