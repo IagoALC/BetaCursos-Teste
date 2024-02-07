@@ -2,7 +2,7 @@
 
 1. Faça o clone do repositório na sua pasta escolhida <br/>
     ``git clone https://github.com/IagoALC/BetaCursos-Teste.git`` <br/>
-2 Entre na pasta <br/>
+2. Entre na pasta <br/>
     ``cd BetaCursos-Teste/`` <br/>
 3. Entre na pasta back-end e faça o composer install para instalar os arquivos do projeto <br/>
     ``cd back-end/`` <br/>
