@@ -1,5 +1,5 @@
 <template>
-  <q-card>
+  <q-card style="min-width: 500px;">
     <q-card-section class="q-pa-sm">
       <q-toolbar>
         <q-toolbar-title class="text-subtitle1 text-weight-medium text-grey-8">{{ categoriasType === 'edit' ? 'Atualizar' : 'Adicionar'}} Categoria</q-toolbar-title>
@@ -7,14 +7,14 @@
 
       <div class="q-pt-md q-px-md">
         <q-input v-model="nome" label="Nome *" spellcheck="false" dense />
-        <q-input v-model="cor" label="Cor *" spellcheck="false" dense >
+        <q-input v-model="cor" label="Cor *" class="teste" spellcheck="false" dense readonly @click="viewColorPicker = !viewColorPicker">
           <template v-slot:no-option>
             <q-item>
               <q-item-section class="text-grey-8">Nenhuma categoria encontrada</q-item-section>
             </q-item>
           </template>
         </q-input>
-        <q-color v-model="cor" no-header no-footer class="my-picker" />
+        <q-color v-if="viewColorPicker" style="width: 200px;" v-model="cor" no-header no-footer class="my-picker q-mt-md" />
       </div>
     </q-card-section>
 
@@ -36,6 +36,7 @@ const emit = defineEmits(['closeModal', 'getCategorias'])
 
 const nome = ref('')
 const cor = ref('')
+const viewColorPicker = ref(false)
 
 const addCategory = () => {
   if (verifyCategory()) return
@@ -88,3 +89,14 @@ onBeforeMount(() => {
   }
 })
 </script>
+<style>
+  .q-field{
+    &.q-field--readonly {
+        .q-field__control {
+          &:before {
+            border-bottom-style: solid;
+          }
+        }
+      }
+  }
+</style>

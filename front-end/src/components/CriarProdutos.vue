@@ -1,5 +1,5 @@
 <template>
-  <q-card>
+  <q-card style="min-width: 500px;">
     <q-card-section class="q-pa-sm">
       <q-toolbar>
         <q-toolbar-title class="text-subtitle1 text-weight-medium text-grey-8">{{ produtosType === 'edit' ? 'Atualizar' : 'Adicionar'}} Produto</q-toolbar-title>
@@ -24,7 +24,6 @@
           :options="options"
           :use-chips="true"
           label="Categorias *"
-          style="width: 250px"
           option-value="id"
           option-label="nome"
         >
